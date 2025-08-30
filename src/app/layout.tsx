@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import Header from "@/components/custom/Header";
 import Footer from "@/components/custom/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +28,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+    >
       <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} dotted-background`}
+        >
           <header>
             <ThemeProvider attribute="class" defaultTheme="dark">
               <Header />
