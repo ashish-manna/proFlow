@@ -8,13 +8,18 @@ const Header = () => {
       <h1 className="text-4xl font-bold">ProFlow</h1>
       <div className="flex items-center justify-between gap-2">
         <div>
-          <Button className="text-black" variant={"destructive"}>
+          <Button
+            className="text-white bg-red-700 cursor-pointer"
+            variant={"ghost"}
+          >
             Create Project <PenBox />
           </Button>
         </div>
         <SignedOut>
           <SignInButton mode="modal">
-            <Button className="cursor-pointer">Sign In</Button>
+            <Button variant={"secondary"} className="cursor-pointer">
+              Sign In
+            </Button>
           </SignInButton>
         </SignedOut>
         <SignedIn>
