@@ -1,11 +1,14 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "../ui/Button";
 import { PenBox } from "lucide-react";
+import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="w-full flex justify-between px-2 py-4">
-      <h1 className="text-4xl font-bold">ProFlow</h1>
+    <div className="w-full flex justify-between px-2 pl-8 py-4">
+      <Link href={"/"}>
+        <h1 className="text-4xl font-bold">ProFlow</h1>
+      </Link>
       <div className="flex items-center justify-between gap-2">
         <div>
           <Button
